@@ -1,0 +1,100 @@
+<div class="header pt-5 pt-md-7">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+      <div class="row">
+        <div class="col-xl-12 col-lg-6">
+          <div class="card card-stats mb-4 mb-xl-0 border-0">
+            <div class="card-body">
+              <div class="row">
+                <div class="col animated backInUp">
+                  <h3 class="card-title text-muted mb-0">Buscar y filtrar</h3><br>
+                  <div class="row">
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <div class="input-group mb-4">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Search" type="text">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <div class="input-group mb-4">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-bullet-list-67"></i></span>
+                          </div>
+
+                          <select id="inputState" class="form-control">
+                            <option selected>Todos</option>
+                            <option>...</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="btn btn-primary" (click)="selectMarket()">Seleccionar</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid pt-md-3">
+  <div class="row">
+
+    <!-- Map content -->
+    <div class="" [ngClass]="{'col-lg-9': marketSelected, 'col-lg-12': !marketSelected}">
+      <div class="card border-0 animate__animated animate__fadeIn">
+        <div id="map-canvas" class="map-canvas" style="height: 600px; margin-bottom: 8px;"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 animate__animated animate__fadeIn" *ngIf="marketSelected">
+      <div class="card border-0">
+        <div class="card-header" style="
+              background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url(https://img.grouponcdn.com/deal/jaSuZT7oxkai5XziRxWW/V3-4272x2823/v1/c700x420.jpg);
+              background-size: cover;
+              background-position: center;
+              color: white ;
+              height: 150px;">
+          <div class="row align-items-center">
+            <div class="col">
+              <h2 class="mb-0 text-white display-4">Piza CesarPiza</h2>
+            </div>
+            <a class="pointer"><i class="fas fa-shopping-basket"></i></a>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="text-muted info-shop"><i class="fas fa-map-marker-alt"></i>&nbsp;Addres</p>
+          <p class="text-muted info-shop"><i class="fas fa-store-alt"></i>&nbsp;Type</p>
+          <p class="text-muted info-shop"><i class="fas fa-phone"></i>&nbsp;phone Number</p>
+          <br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, facere laudantium dolorem ipsam sapiente
+            doloribus enim magnam eligendi.</p>
+          <div class="text-right">
+            <a class="icon-shop" href=""><i class="far fa-comment-alt text-orange"></i></a>&nbsp;
+            <a class="icon-shop" href=""><i class="far fa-star text-orange"></i></a>
+
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <a style="color: #323232;" href=""><i class="fas fa-store-alt"></i>&nbsp;Entrar A la tienda</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

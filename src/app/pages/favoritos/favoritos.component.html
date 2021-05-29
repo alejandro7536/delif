@@ -1,0 +1,50 @@
+<div class="header pt-5 pt-md-6">
+  <div class="container-fluid">
+
+    <a class="pointer" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+      aria-controls="collapseExample">
+      <i class="fas fa-arrow-down" [ngClass]="{'fa-arrow-down': isCollapsed, 'fa-arrow-up': !isCollapsed}"></i>
+    </a>
+
+    <div class="row mt-1">
+      <div class="col-lg-3 mb-3">
+        <div class="card border-0">
+          <div class="card-header" style="
+              background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url(https://img.grouponcdn.com/deal/jaSuZT7oxkai5XziRxWW/V3-4272x2823/v1/c700x420.jpg);
+              background-size: cover;
+              background-position: center;
+              color: white ;
+              height: 150px;">
+            <div class="row align-items-center">
+              <div class="col">
+                <h2 class="mb-0 text-white display-4">Piza CesarPiza</h2>
+              </div>
+              <a class="pointer"><i class="fas fa-shopping-basket"></i></a>&nbsp;
+            </div>
+            <a class="text-white" href=""><small><i class="fas fa-store-alt"></i>&nbsp;Entrar A la tienda</small></a>
+          </div>
+
+          <div id="collapseExample" [ngbCollapse]="isCollapsed" class="animate__animated animate__fadeIn card-body">
+            <p class="text-muted info-shop"><i class="fas fa-map-marker-alt"></i>&nbsp;Addres</p>
+            <p class="text-muted info-shop"><i class="fas fa-store-alt"></i>&nbsp;Type</p>
+            <p class="text-muted info-shop"><i class="fas fa-phone"></i>&nbsp;phone Number</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, facere laudantium dolorem ipsam
+              sapiente
+              doloribus enim magnam eligendi.</p>
+            <div class="text-right">
+              <a class="icon-shop" href=""><i class="far fa-comment-alt text-orange"></i></a>&nbsp;
+              <a class="icon-shop" href=""><i class="far fa-star text-orange"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</div>
